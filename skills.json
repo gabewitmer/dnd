@@ -1,0 +1,9 @@
+{
+	"jump": {
+		"rank": 0,
+		"ability": "str",
+		"misc": 0,
+		"synergy": ["tumble"],
+		"trained": false
+	}
+}

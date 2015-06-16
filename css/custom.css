@@ -1,0 +1,17 @@
+
+div.nav-container {
+	padding-left: 10px;
+	width: 150px;
+	float: left;
+	background-color: black;
+	height: 100%;
+	position: absolute;
+}
+
+.nav-container img {
+	padding: 10px 0 10px 10px;
+}
+
+.nav-container ul a {
+	font-size: 16px;
+}
