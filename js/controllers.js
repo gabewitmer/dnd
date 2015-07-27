@@ -23,7 +23,13 @@ characterControllers.controller('TurnAttemptController', ['$scope', '$rootScope'
 	$rootScope.selected = 'turnAttempt'
 
 	function getMaxHd() {
-		var check = $scope.roll + $scope.chaMod;
+
+		if ($scope.rollCheck != null) {
+			check = $scope.rollCheck;
+		} else {
+			check = Math.floor((Math.random()*20)+1);
+		}
+		check = check  + $scope.chaMod;
 		if ($scope.religion) {
 			check += 2;
 		}
@@ -60,8 +66,11 @@ characterControllers.controller('TurnAttemptController', ['$scope', '$rootScope'
 	};
 
 	function getDmgRoll() {
-		// var dmgRoll = Math.floor((Math.random()*11) + 2);
-		var dmgRoll = $scope.rollDmg;
+		if ($scope.rollDmg != null) {
+			var dmgRoll = $scope.rollDmg;
+		} else {
+			var dmgRoll = Math.floor((Math.random()*11) + 2);
+		}
 		$scope.dmgRoll = ($scope.chaMod + $scope.cleric.level + dmgRoll);
 		$scope.dmgLeft = $scope.dmgRoll;
 	};
@@ -104,6 +113,7 @@ characterControllers.controller('TurnAttemptController', ['$scope', '$rootScope'
 	var skellyLeft = ['pics/skellyLeft.png', 'pics/skellyRight.png', 'pics/dust.png'];
 
 	var skellyRight = ['pics/skellyRight.png', 'pics/skellyLeft.png', 'pics/dust.png'];
+	var check = 0;
 
 	$scope.dmgLeft = 0;
 
@@ -128,6 +138,7 @@ characterControllers.controller('BuffsController', ['$scope', '$rootScope', 'Cle
 	var sizeCat = 0;
 	var saveMod = 0;
 	var atkMod = 0;
+	var acMod = 0;
 	var dmgMod = 0;
 	$scope.grapple = 0;
 	$scope.fort = 0;
@@ -135,6 +146,7 @@ characterControllers.controller('BuffsController', ['$scope', '$rootScope', 'Cle
 	$scope.will = 0;
 	$scope.attack = 0;
 	$scope.thDmg = 0;
+	$scope.ac = 0;
 
 	ClericService.get().$promise.then(function(data) {
 		$scope.cleric = data;
@@ -203,12 +215,31 @@ characterControllers.controller('BuffsController', ['$scope', '$rootScope', 'Cle
 		$scope.setStats();
 	}
 
+	$scope.vestmentUpdate = function() {
+		if ($scope.vestment) {
+			acMod += 2;
+		} else {
+			acMod -= 2;
+		}
+		$scope.setStats();
+	}
+
+	$scope.weaponUpdate = function() {
+		if ($scope.weapon) {
+			atkMod += 2;
+		} else {
+			atkMod -= 2;
+		}
+		$scope.setStats();
+	}
+
 	$scope.setStats = function() {
 		$scope.grapple = $scope.cleric.bab + $scope.strMod + (sizeCat*4);
 		$scope.fort = $scope.cleric.baseFortitude + $scope.conMod + saveMod;
 		$scope.reflex = $scope.cleric.baseReflex + $scope.dexMod + saveMod;
 		$scope.will = $scope.cleric.baseWill + $scope.wisMod + saveMod;
 		$scope.attack = $scope.cleric.bab + $scope.strMod + atkMod;
+		$scope.ac = $scope.cleric.ac + $scope.dexMod + acMod;
 		$scope.thDmg = Math.floor($scope.strMod * 1.5 + dmgMod);
 	}
 

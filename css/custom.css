@@ -1,11 +1,7 @@
 
-div.nav-container {
-	padding-left: 10px;
-	width: 150px;
-	float: left;
+.nav-container {
 	background-color: black;
-	height: 100%;
-	position: absolute;
+	padding-left: 25px;
 }
 
 .nav-container img {
@@ -15,7 +11,9 @@ div.nav-container {
 .nav-container ul a {
 	font-size: 16px;
 }
-.ability {
+
+
+.abilityScore {
 	background-color:#FFFFEE;
 	text-align:center;
 	padding:1px 0px 0px 0px;
@@ -42,4 +40,62 @@ div.nav-container {
 	float:right;
 	margin:-3px 0px 0px 0px;
 	font-size:9pt;
+}
+
+.ability {
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+.abilityBar {
+	background-color:#666666;
+	padding:0px 2px 1px 5px;
+	border-style:solid;
+	border-width:1px
+	;border-color:#000000;
+	height:14px;
+	font-size:8pt;
+}
+
+.abilityContainer {
+	/*width:232px;*/
+	margin:0px 0px 8px 0px;
+}
+
+.charContent {
+	display:inline-block;
+	width:100%;
+	margin:8px 3px 1px 8px;
+	vertical-align: top;
+}
+
+.charSheet {
+	font-family:arial;
+	font-size:8pt;
+	/*width:730px;*/
+	line-height:normal;
+	color:#000000;
+	border-style:solid;
+	border-width:1px;
+	border-color: #666666;
+	text-align:left;
+}
+
+.charHeader {
+	color:#FFFFFF;
+	background-color:#666666;
+	padding:4px 8px 5px 8px;
+	font-size:10pt;
+}
+
+.char-title {
+	
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.margin-right {
+	margin-right: 25px;
 }

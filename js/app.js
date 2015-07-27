@@ -33,4 +33,9 @@ clericApp.config(['$routeProvider', function(routeProvider) {
 			controller: 'BuffsController'
 		})
 
+		.when('/charSheet2', {
+			templateUrl: 'pages/charSheet2.html',
+			controller: 'TurnAttemptController'
+		})
+
 }]);

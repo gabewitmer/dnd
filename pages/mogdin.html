@@ -33,6 +33,21 @@
 						<input ng-model="power" type="checkbox" ng-change="powerUpdate()">Divine Power
 					</label>
 				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="vestment" type="checkbox" ng-change="vestmentUpdate()">Magic Vestment
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="weapon" type="checkbox" ng-change="weaponUpdate()">Greater Magic Weapon
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="strider" type="checkbox" ng-change="striderUpdate()">Longstrider
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -96,9 +111,9 @@
 			</div>
 			<div class="panel-body">
 				<div class="row">
-					<label class="col-sm-6">AC</label>
+					<label class="col-sm-6">Base/AC</label>
 					<div class="col-sm-6">
-						{{ cleric.ac }}
+						{{ cleric.ac }} / {{ ac }}
 					</div>
 				</div>
 				<div class="row">
@@ -141,38 +156,37 @@
 		</div>
 	</div>
 	<div class="buff-container col-lg-6">
-	<div class="wrath col-lg-6" ng-show="wrath">
-		<h4>Righteous Wrath of the Faithful</h4>
-		extra attack at highest BAB <br>
-		Aura 30ft
-	</div>
-	<div class="might col-lg-6" ng-show="might">
-		<h4>Righteous Might</h4>
-		+1 size category <br>
-		DR 3/evil
-	</div>
-	<div class="holy col-lg-6" ng-show="holy">
-		<h4>Lesser Holy Transformation</h4>
-		fly speed 60ft <br>
-		good manueverability
-	</div>
-	<div class="power col-lg-6" ng-show="power">
-		<h4>Divine Power</h4>
-		full BAB <br>
-		temp hit points = lvl
-	</div>
-	</div>
-</div>
-<!-- <div class="row">
-	<div class="wrathBack col-lg-3" ng-show="wrath">
-		<div class="wrath">
-			<h4><u>Righteous Wrath of the Faithful</u></h4>
-			+3 on attack and damage <br>
+		<div class="wrath col-lg-6" ng-show="wrath">
+			<h4>Righteous Wrath of the Faithful</h4>
 			extra attack at highest BAB <br>
 			Aura 30ft
-			<div class="test">
-
-			</div>
+		</div>
+		<div class="might col-lg-6" ng-show="might">
+			<h4>Righteous Might</h4>
+			+1 size category <br>
+			DR 3/evil
+		</div>
+		<div class="holy col-lg-6" ng-show="holy">
+			<h4>Lesser Holy Transformation</h4>
+			fly speed 60ft <br>
+			good manueverability
+		</div>
+		<div class="power col-lg-6" ng-show="power">
+			<h4>Divine Power</h4>
+			full BAB <br>
+			temp hit points = lvl
+		</div>
+		<div class="vestment col-lg-6" ng-show="vestment">
+			<h4>Magic Vestment</h4>
+			+1 armor enhancement /4 lvls
+		</div>
+		<div class="weapon col-lg-6" ng-show="weapon">
+			<h4>Greater Magic Weapon</h4>
+			+1 weapon enhancement /4 lvls
+		</div>
+		<div class="strider col-lg-6" ng-show="strider">
+			<h4>Longstrider</h4>
+			+10 Movement
 		</div>
 	</div>
-</div> -->
+</div>

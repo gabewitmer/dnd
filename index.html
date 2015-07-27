@@ -22,27 +22,30 @@
 
 	<body id="page">
 		<div class="row">
-			<div class="nav-container">
-				<ul class="nav">
-					<li><img src="pics/2d6.png"/></li>
-					<li><a href="">background</a> </li>
-					<li><a href="skills.html">Skills</a> </li>
-					<li><a href="buffs.html">Active Effects</a> </li>
-					<li><a href="spells.html">spells</a> </li>
-					<li><a href="">overview</a> </li>
-					<li><a href="mogdin">weapons/armor</a> </li>
-					<li><a href="#/turning">equipment</a> </li>
-					<li><a href="feats">Feats</a></li>
-					<li><a href="admin">Admin</a> </li>
-					<li><a href="charSheet">3.5 Sheet</a></li>
-				</ul>
+			<!-- <div class="nav-container"> -->
+			<div class="col-lg-2">
+				<div class="nav-container">
+					<ul class="nav">
+						<li><img src="pics/2d6.png"/></li>
+						<li><a href="#/charSheet2">background</a> </li>
+						<li><a href="#/skills">Skills</a> </li>
+						<li><a href="#/buffs">Active Effects</a> </li>
+						<li><a href="#/spells">spells</a> </li>
+						<li><a href="#/">overview</a> </li>
+						<li><a href="#/mogdin">weapons/armor</a> </li>
+						<li><a href="#/turning">equipment</a> </li>
+						<li><a href="#/feats">Feats</a></li>
+						<li><a href="#/admin">Admin</a> </li>
+						<li><a href="#/charSheet">3.5 Sheet</a></li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="border col-lg-offset-1">
+			<div class="col-lg-10">
 				<br><br>
-				<div class="container">
+				<!-- <div class="container"> -->
 					<div ng-view class="view-frame"></div>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</body>
