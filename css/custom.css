@@ -15,3 +15,31 @@ div.nav-container {
 .nav-container ul a {
 	font-size: 16px;
 }
+.ability {
+	background-color:#FFFFEE;
+	text-align:center;
+	padding:1px 0px 0px 0px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:30px;
+	height:17px;
+	float:right;
+	margin:-3px 3px 0px 0px;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.abilityMod {
+	background-color:#CCCCBB;
+	text-align:center;
+	padding:1px 2px 0px 0px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:28px;
+	height:17px;
+	float:right;
+	margin:-3px 0px 0px 0px;
+	font-size:9pt;
+}

@@ -1,0 +1,178 @@
+<div class="row">
+	<div class="col-lg-6">
+		<h1>Cleric buffs</h1>
+	</div>
+	<div class="col-lg-6">
+		<h1>Active</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-2 col-lg-offset-0">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Spells
+			</div>
+			<div class="panel-body">
+				<div class="checkbox">
+					<label>
+						<input ng-model="might" type="checkbox" ng-change="mightUpdate()">Righteous Might
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="wrath" type="checkbox" ng-change="wrathUpdate()">Righteous Wrath of the Faithful
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="holy" type="checkbox" ng-change="holyUpdate()">Lesser Holy Transformation
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="power" type="checkbox" ng-change="powerUpdate()">Divine Power
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-2 col-lg-offset-0">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				{{ cleric.name }}'s Attributes
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<label class="col-sm-4">lvl</label>
+					<div class="col-sm-8">
+						{{ cleric.level }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">str</label>
+					<div class="col-sm-8">
+						{{ cleric.strength }} / {{ strMod }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">dex</label>
+					<div class="col-sm-8">
+						{{ cleric.dexterity }} / {{ dexMod }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">con</label>
+					<div class="col-sm-8">
+						{{ cleric.constitution }} / {{ conMod }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">int</label>
+					<div class="col-sm-8">
+						{{ cleric.intelligence }} / {{ intMod }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">wis</label>
+					<div class="col-sm-8">
+						{{ cleric.wisdom }} / {{ wisMod }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-4">cha</label>
+					<div class="col-sm-8">
+						{{ cleric.charisma }} / {{ chaMod }}
+					</div>
+				</div>
+
+				<!-- <button class="btn btn-success btn-block" ng-click="buff()">Submit</button> -->
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-2 col-lg-offset-0">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Modified Stats
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<label class="col-sm-6">AC</label>
+					<div class="col-sm-6">
+						{{ cleric.ac }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">BAB/ATK</label>
+					<div class="col-sm-6">
+						{{ cleric.bab }} / {{ attack }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">THDmg</label>
+					<div class="col-sm-6">
+						{{ thDmg }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">grapple</label>
+					<div class="col-sm-6">
+						{{ grapple }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">Fortitude</label>
+					<div class="col-sm-6">
+						{{ fort }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">Reflex</label>
+					<div class="col-sm-6">
+						{{ reflex }}
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-sm-6">Will</label>
+					<div class="col-sm-6">
+						{{ will }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="buff-container col-lg-6">
+	<div class="wrath col-lg-6" ng-show="wrath">
+		<h4>Righteous Wrath of the Faithful</h4>
+		extra attack at highest BAB <br>
+		Aura 30ft
+	</div>
+	<div class="might col-lg-6" ng-show="might">
+		<h4>Righteous Might</h4>
+		+1 size category <br>
+		DR 3/evil
+	</div>
+	<div class="holy col-lg-6" ng-show="holy">
+		<h4>Lesser Holy Transformation</h4>
+		fly speed 60ft <br>
+		good manueverability
+	</div>
+	<div class="power col-lg-6" ng-show="power">
+		<h4>Divine Power</h4>
+		full BAB <br>
+		temp hit points = lvl
+	</div>
+	</div>
+</div>
+<!-- <div class="row">
+	<div class="wrathBack col-lg-3" ng-show="wrath">
+		<div class="wrath">
+			<h4><u>Righteous Wrath of the Faithful</u></h4>
+			+3 on attack and damage <br>
+			extra attack at highest BAB <br>
+			Aura 30ft
+			<div class="test">
+
+			</div>
+		</div>
+	</div>
+</div> -->

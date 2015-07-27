@@ -23,4 +23,14 @@ clericApp.config(['$routeProvider', function(routeProvider) {
 			controller: 'TurnAttemptController'
 		})
 
+		.when('/turning', {
+			templateUrl: 'pages/turning.html',
+			controller: 'TurnAttemptController'
+		})
+
+		.when('/mogdin', {
+			templateUrl: 'pages/mogdin.html',
+			controller: 'BuffsController'
+		})
+
 }]);

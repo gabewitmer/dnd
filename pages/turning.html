@@ -1,0 +1,91 @@
+<div class="row">
+	<div class="col-lg-4 col-lg-offset-1">
+		<div class="panel panel-primary">
+			<div id="clericHeading" class="panel-heading">
+				My Cleric: {{ cleric.name }}<br>
+				Turn Attempt
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-lg-3 cleric">Level:</div>
+						<input id="clericLevel" class="form-control col-lg-6 cleric" type="number" placeholder="Cleric Level" ng-model="cleric.level">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-lg-3 cleric">Charisma:</div>
+						<input id="cha" class="form-control col-lg-6 cleric" type="number" placeholder="Charisma score" ng-model="cleric.charisma">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-lg-3 cleric">D20:</div>
+						<input id="roll" class="form-control col-lg-6 cleric" type="number" placeholder="Check Roll" ng-model="roll">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-lg-3 cleric">2d6:</div>
+						<input id="roll" class="form-control col-lg-6 cleric" type="number" placeholder="Damage Roll" ng-model="rollDmg">
+					</div>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="religion" type="checkbox">Check if religion skill > 4
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input ng-model="greaterTurn" type="checkbox">Check if using greater turn
+					</label>
+				</div>
+				<button class="btn btn-success btn-block" ng-click="calculate()">Submit</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-lg-offset-1">
+		<table>
+			<tr>
+				<td>
+					<img class="skeleton" ng-src="{{ skellyImgLeft }}">
+				</td>
+				<td>
+					<img class="clericimg" ng-click="getNextImage()" ng-src="{{ img }}">
+				</td>
+				<td>
+					<img class="skeleton" ng-src="{{ skellyImgRight }}">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="row" ng-show="result">
+	<div class="col-lg-4 col-lg-offset-1">
+		<p>
+			<strong>Max HD Affected: </strong>
+			<span id="maxHD">{{ maxHd }}</span>
+		</p>
+		<p>
+			<strong>Total Turn Damage:</strong>
+			<span id="turnDamage">{{ dmgRoll }}</span>
+		</p>
+		<p>
+			<strong>Damage Remaining:</strong>
+			<span id="turnDamageLeft">{{ dmgLeft }}</span>
+		</p>
+		<div class="form-group">
+			<input id="creatureHD" class="form-control" type="number" placeholder="Creature HD" ng-model="creatureHD">
+		</div>
+		<button id="decriment" class="btn btn-danger btn-block" ng-click="updateDmgLeft(creatureHD)">subtract</button>
+	</div>
+</div>
+
+<script>
+	(function() {
+		$('.clericimg').click(function() {
+			alert('hello');
+		});
+	})();
+</script>

@@ -1,0 +1,18 @@
+{
+	"level" : 10,
+	"name" : "Mogdin",
+	"race" : "Gold Dwarf",
+	"backstory" : "Mogdin Glangrim backstory Deep underground, A young dwarf dreaming of a world he never knew, He looked above, to trees and mountain height, And saw a Moon so blue, oh-oh. They told him dwarves could never fly so high They laughed and said He'd fail if he tried He left his home, and his life behind, His dream burning like a rocket inside. So strap yourself into the rocket now, rocket now (so strap yourself into the rocket), You got your friends right by your side, oh-oh-oh, (you got your friends by your side), Final checks, then you close your eyes, Your dream burning, like a rocket inside. Mogdin woke up after the blast to find an explosion of pain and the inability to raise his mangled body. Opening his eyes, Mogdin finds a cleric standing over him. He continued to watch as a man in brilliant flowing robes made gestures and prayers while the pain slowly subsided. Great relief was found after Mogdin found himself pried from the clutches of death. Still unable to stand, he found himself being picked up by gentle hands and carried to the nearest temple. After his rescue, Mogdin felt indebted to the church and dedicated himself to the clergy. With his mission to help and ease the sufferings of others, Mogdin now works at the temple helping and studying. While Mogdin remains committed to his mission, he continues to grow restless with his dream burning like a rocket inside.",
+	"strength" : 18,
+	"dexterity" : 10,
+	"constitution" : 20,
+	"intelligence" : 10,
+	"wisdom" : 19,
+	"charisma" : 13,
+	"ac" : 19,
+	"bab" : 6,
+	"grapple" : 9,
+	"baseFortitude" : 9,
+	"baseReflex" : 2,
+	"baseWill" : 11
+}
